@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+// set une variable d'environnement dans package.json
+// "start": "PORT=4000 nodemon app.js",
 const port = process.env.PORT || 3000;
 const path = require("path");
 const morgan = require("morgan");
