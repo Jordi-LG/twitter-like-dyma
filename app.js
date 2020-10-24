@@ -1,13 +1,16 @@
 const express = require("express");
-const app = express();
-// set une variable d'environnement dans package.json
-// "start": "PORT=4000 nodemon app.js",
-const port = process.env.PORT || 3000;
 const path = require("path");
 const morgan = require("morgan");
 // récupération d'index.js dans le folder routes
 const index = require("./routes");
+// Récupération de la base de données
+require("./database");
 
+// set une variable d'environnement dans package.json
+// "start": "PORT=4000 nodemon app.js",
+const port = process.env.PORT || 3000;
+
+const app = express();
 // app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "pug");
 
