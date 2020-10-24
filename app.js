@@ -3,6 +3,9 @@ const path = require("path");
 const morgan = require("morgan");
 // récupération d'index.js dans le folder routes
 const index = require("./routes");
+
+require("dotenv").config();
+
 // Récupération de la base de données
 require("./database");
 
