@@ -3,7 +3,12 @@ const schema = mongoose.Schema;
 
 // Schema pour les documents tweets
 const tweetSchema = schema({
-  content: { type: String, maxlength: 140, minlength: 1, required: true },
+  content: {
+    type: String,
+    maxlength: [140, "Tweet trop long"],
+    minlength: [1, "Tweet trop court"],
+    required: [true, "Champ requis"],
+  },
 });
 
 // On associe le schema du document à la collection tweets
