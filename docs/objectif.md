@@ -12,3 +12,8 @@
 
 - Mise en place de l'architecture Express
 - Création du laout et de la topbar
+
+## Partie 2
+
+- Api relative aux tweets
+- Tweets feed (fil d'actualité)
