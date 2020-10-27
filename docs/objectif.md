@@ -17,3 +17,10 @@
 
 - Api relative aux tweets
 - Tweets feed (fil d'actualité)
+
+## Partie 3
+
+- Refactorisation avec contrôleurs et queries
+- Gestion d'erreur
+- Suppresion d'un tweet
+- Update d'un tweet
