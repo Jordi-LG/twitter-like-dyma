@@ -1,3 +1,4 @@
+const { findByIdAndUpdate } = require("../database/models/tweet.model");
 const Tweet = require("../database/models/tweet.model");
 
 exports.getTweets = () => {
@@ -11,4 +12,19 @@ exports.createTweet = (tweet) => {
 
 exports.deleteTweet = (tweetId) => {
   return Tweet.findByIdAndDelete(tweetId).exec();
+};
+
+exports.getTweet = (tweetId) => {
+  return Tweet.findOne({ _id: tweetId }).exec();
+};
+
+exports.updateTweet = (tweetId, tweet) => {
+  return Tweet.findByIdAndUpdate(
+    tweetId,
+    {
+      $set: tweet,
+    },
+    // run les validators après l'update !
+    { runValidators: true }
+  );
 };
