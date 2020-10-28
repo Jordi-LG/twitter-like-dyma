@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const morgan = require("morgan");
+const errorHandler = require("errorhandler");
 // récupération d'index.js dans le folder routes
 const index = require("./routes");
 
@@ -30,5 +31,19 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("short"));
 
 app.use(index);
+
+// Gestion d'erreur en fonction de l'environnement
+if (process.env.NODE_ENV === "development") {
+  // Invoque un middleware pour la gestion d'erreur
+  app.use(errorHandler);
+} else {
+  app.use((err, res, req, next) => {
+    const code = err.code || 500;
+    res.status(code).json({
+      code: code || 500,
+      message: code === 500 ? null : err.message,
+    });
+  });
+}
 
 app.listen(port);
