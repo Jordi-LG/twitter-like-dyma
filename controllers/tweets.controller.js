@@ -1,10 +1,14 @@
 const Tweet = require("../database/models/tweet.model");
-const { getTweets, createTweet } = require("../queries/tweets.queries");
+const {
+  getTweets,
+  createTweet,
+  deleteTweet,
+} = require("../queries/tweets.queries");
 
 exports.tweetList = async (req, res, next) => {
   try {
     const tweets = await getTweets();
-    res.render("tweets/tweet-list", { tweets });
+    res.render("tweets/tweet", { tweets });
   } catch (e) {
     next(e);
   }
@@ -30,6 +34,8 @@ exports.tweetDelete = async (req, res, next) => {
   try {
     const tweetId = req.params.tweetId;
     await deleteTweet(tweetId);
+    const tweets = await getTweets();
+    res.render("tweets/tweet-list", { tweets });
   } catch (e) {
     next(e);
   }
