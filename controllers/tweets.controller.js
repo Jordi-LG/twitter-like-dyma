@@ -25,3 +25,12 @@ exports.tweetCreate = async (req, res, next) => {
     res.status(400).render("tweets/tweet-form", { errors });
   }
 };
+
+exports.tweetDelete = async (req, res, next) => {
+  try {
+    const tweetId = req.params.tweetId;
+    await deleteTweet(tweetId);
+  } catch (e) {
+    next(e);
+  }
+};
