@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 app.use(
   session({
-    secret: "je suis un secret",
+    secret: process.env.SESSION_SECRET,
     // sauvegarder session même sans modification
     resave: false,
     // sauvegarder la session même sans utilisation par le user
