@@ -9,6 +9,7 @@ const tweetSchema = schema({
     minlength: [1, "Tweet trop court"],
     required: [true, "Champ requis"],
   },
+  author: { type: mongoose.Schema.Types.ObjectId, ref: "user", required: true },
 });
 
 // On associe le schema du document à la collection tweets
