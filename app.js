@@ -15,8 +15,13 @@ require("./database");
 const port = process.env.PORT || 3000;
 
 const app = express();
-// app.set('views', path.join(__dirname, 'views'));
+
+// référence app
+exports.app = app;
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+
+require("./config/session.config");
 
 // ==== MIDDLEWARE EXPRESS
 // Je récupère les fichiers que je retournerai à l'utilisateur via le middleware static
