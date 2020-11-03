@@ -2,7 +2,7 @@ const { findByIdAndUpdate } = require("../database/models/tweet.model");
 const Tweet = require("../database/models/tweet.model");
 
 exports.getTweets = () => {
-  return Tweet.find({}).exec();
+  return Tweet.find({}).populate("author").exec();
 };
 
 exports.createTweet = (tweet) => {
