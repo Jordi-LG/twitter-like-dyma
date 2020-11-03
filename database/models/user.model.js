@@ -15,6 +15,10 @@ userSchema.statics.hashPassword = (password) => {
   return bcrypt.hash(password, 12);
 };
 
+userSchema.methods.comparePassword = function (password) {
+  return bcrypt.compare(password, this.local.password);
+};
+
 // On associe le schema du document à la collection tweets
 const User = mongoose.model("user", userSchema);
 

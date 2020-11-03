@@ -22,6 +22,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 require("./config/session.config");
+require("./config/passport.config");
 
 // ==== MIDDLEWARE EXPRESS
 // Je récupère les fichiers que je retournerai à l'utilisateur via le middleware static
