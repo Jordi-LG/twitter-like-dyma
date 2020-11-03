@@ -24,3 +24,8 @@
 - Gestion d'erreur
 - Suppresion d'un tweet
 - Update d'un tweet
+
+## Partie 4
+
+- Système d'authentification
+- Refactorisation des tweets
