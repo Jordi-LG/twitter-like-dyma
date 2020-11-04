@@ -10,7 +10,6 @@ const {
 exports.tweetList = async (req, res, next) => {
   try {
     const tweets = await getTweets();
-    console.log(tweets);
     res.render("tweets/tweet", {
       tweets,
       isAuthenticated: req.isAuthenticated(),

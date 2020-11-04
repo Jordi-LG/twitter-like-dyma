@@ -1,1 +1,18 @@
-p profile
+div(class="profile-container mr-3 bg-white d-flex flex-column")
+  form(class="d-flex flex-row justify-content-center align-items-center" action="/users/update/image" method="post" enctype="multipart/data-form")
+    input(type="file" name="avatar" class="d-none")
+    img(src="/img/default-profile.jpg" class="img-fluid")
+  div(class="d-flex flex-row justify-content-center align-items-center my-3")
+   p= `${currentUser.username} (${currentUser.local.email})`
+  div(class="d-flex flex-row justify-content-center align-items-center my-3 text-center")
+    div(class="flex-fill")
+      p
+        strong Tweet
+        br
+        span(class='text-primary')= tweets.length
+    div(class="flex-fill")
+      p
+        strong Following
+        br
+        span(class='text-primary') -
+
