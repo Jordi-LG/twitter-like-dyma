@@ -10,14 +10,9 @@ require("dotenv").config();
 // Récupération de la base de données
 require("./database");
 
-// set une variable d'environnement dans package.json
-// "start": "PORT=4000 nodemon app.js",
-const port = process.env.PORT || 3000;
-
 const app = express();
+module.exports = app;
 
-// référence app
-exports.app = app;
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
@@ -51,5 +46,3 @@ if (process.env.NODE_ENV === "development") {
     });
   });
 }
-
-app.listen(port);
