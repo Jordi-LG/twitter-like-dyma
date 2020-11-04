@@ -29,3 +29,9 @@
 
 - Système d'authentification
 - Refactorisation des tweets
+
+## Partie 5
+
+- Création de la partie profil
+- Refactorisation du css
+- Upload d'une photo profil
