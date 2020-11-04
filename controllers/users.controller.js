@@ -34,6 +34,7 @@ exports.signup = async (req, res, next) => {
   }
 };
 
+// 2 middlewares executés l'un après l'autre
 exports.uploadImage = [
   upload.single("avatar"),
   async (req, res, next) => {

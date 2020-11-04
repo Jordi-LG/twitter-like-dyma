@@ -61,6 +61,7 @@ exports.tweetEdit = async (req, res, next) => {
     const tweet = await getTweet(tweetId);
 
     res.render("tweets/tweet-form", {
+      tweets: {},
       tweet,
       isAuthenticated: req.isAuthenticated(),
       currentUser: req.user,
