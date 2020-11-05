@@ -36,7 +36,7 @@ app.use(index);
 // Gestion d'erreur en fonction de l'environnement
 if (process.env.NODE_ENV === "development") {
   // Invoque un middleware pour la gestion d'erreur
-  app.use(errorHandler);
+  app.use(errorHandler());
 } else {
   app.use((err, res, req, next) => {
     const code = err.code || 500;
