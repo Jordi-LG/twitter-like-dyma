@@ -51,7 +51,7 @@ exports.uploadImage = [
       user.avatar = `/img/avatars/${req.file.filename}`;
       await user.save();
       res.redirect("/tweets");
-    } catch (error) {
+    } catch (e) {
       next(e);
     }
   },
