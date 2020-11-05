@@ -6,4 +6,6 @@ module.exports = {
   cert: "/etc/letsencrypt/live/www.jordi-projects.site/fullchain.pem",
   key: "/etc/letsencrypt/live/www.jordi-projects.site/privkey.pem",
   session: "jH3b8G$AfvPW4!!9JR#3",
+  portHttp: 80,
+  portHttps: 443,
 };
