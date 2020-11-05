@@ -14,8 +14,8 @@ router.get("/", userList);
 router.get("/follow/:userId", followUser);
 router.get("/unfollow/:userId", unfollowUser);
 router.get("/signup/form", signupForm);
+router.get("/:username", userProfile);
 router.post("/signup", signup);
 router.post("/update/image", ensureAuthenticated, uploadImage);
-router.get("/:username", userProfile);
 
 module.exports = router;
