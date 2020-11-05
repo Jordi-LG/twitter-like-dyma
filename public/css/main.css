@@ -75,3 +75,12 @@ body {
   background: #eee;
   transition: background 0.2s;
 }
+
+.btn-follow {
+  color: #007bff;
+  border-radius: 15px;
+  font-weight: bold;
+  border-width: 2px;
+}
+
+.btn-unfollow {}
