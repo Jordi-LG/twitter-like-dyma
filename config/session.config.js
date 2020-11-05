@@ -2,10 +2,11 @@ const app = require("../app");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const mongoose = require("mongoose");
+const env = require(`../environnement/${process.env.NODE_ENV}`);
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: env.session,
     // sauvegarder session même sans modification
     resave: false,
     // sauvegarder la session même sans utilisation par le user
