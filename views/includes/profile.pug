@@ -2,9 +2,9 @@ script(src="/js/profile.js")
 div(class="profile-container mr-3 bg-white d-flex flex-column")
   form(id="form-container" class="d-flex flex-row justify-content-center align-items-center p-3" action="/users/update/image" method="post" enctype="multipart/form-data")
     input(type="file" name="avatar" class="d-none" id="input-avatar")
-    img(src=currentUser.avatar class="img-fluid" id="image-profile")
+    img(src=user.avatar class="img-fluid" id="image-profile")
   div(class="d-flex flex-row justify-content-center align-items-center my-3")
-   p= `${currentUser.username} (${currentUser.local.email})`
+   p= `${user.username} (${user.local.email})`
   div(class="d-flex flex-row justify-content-center align-items-center my-3 text-center")
     div(class="flex-fill")
       p

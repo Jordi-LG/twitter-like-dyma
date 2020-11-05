@@ -35,3 +35,8 @@
 - Création de la partie profil
 - Refactorisation du css
 - Upload d'une photo profil
+
+## Partie 6
+
+- Barre de recherche
+- Follow un utilisateur

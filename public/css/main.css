@@ -45,3 +45,7 @@ body {
   max-height: 100px;
   cursor: pointer;
 }
+
+.pointer-cursor {
+  cursor: pointer;
+}

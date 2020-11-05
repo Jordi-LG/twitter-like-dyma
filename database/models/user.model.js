@@ -10,6 +10,7 @@ const userSchema = schema({
     password: { type: String, required: true },
   },
   avatar: { type: String, default: "/img/default-profile.jpg" },
+  following: { type: [schema.Types.ObjectId], ref: "user" },
 });
 
 userSchema.statics.hashPassword = (password) => {
