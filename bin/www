@@ -7,8 +7,9 @@ const env = require(`../environnement/${process.env.NODE_ENV}`);
 const httpServer = http
   .createServer((req, res) => {
     res.writeHead(301, {
-      location: `https://${req.headers.hostname}${req.url}`,
+      location: `https://${req.headers.host}${req.url}`,
     });
+    res.end();
   })
   .listen(80);
 
