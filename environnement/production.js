@@ -3,6 +3,6 @@ const path = require("path");
 module.exports = {
   dbUrl:
     "mongodb+srv://Jordi:kb5ak6R4soK8RNGo@cluster0.swsfo.mongodb.net/twitter?retryWrites=true&w=majority",
-  cert: path.join(__dirname, ""),
-  key: path.join(__dirname, ""),
+  cert: "/etc/letsencrypt/live/www.jordi-projects.site/fullchain.pem",
+  key: "/etc/letsencrypt/live/www.jordi-projects.site/privkey.pem",
 };
